@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Foodsmart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="{% static 'homepage/layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div style="background-image:url({% static 'homepage/images/demo/backgrounds/food.jpg' %});">
+  <!-- ################################################################################################ -->
+
+</div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left">
+        <!-- ################################################################################################ -->
+        <h1><a href="/">FOODSMART</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right">
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li class="active"><a href="/">Home</a></li>
+
+          <li class="active"><a href="{% url 'cartdetails' %}"><i class="fa fa-shopping-cart" style="font-size:20px"></i> {{itc}}</a></li>
+          <li class="active"><a href="{% url 'reg' %}">Register</a></li>
+          <li class="active"><a href="{% url 'login' %}">Login</a></li>
+          <li class="active"><a href="/">Logout</a></li>
+
+
+
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
